@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trident Bot Commands</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://cdn.discordapp.com/attachments/1247058898846748705/1397531761797365812/trident.gif?ex=68821060&is=6880bee0&hm=c54b2e92eacd7a044c1c571d5c7d344fdf4b4fb319dbe39377537253a9e068dc&" alt="Trident" class="logo-img">
+                <h2>TRIDENT</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="commands.html" class="nav-link">Commands</a>
+                <a href="apps.html" class="nav-link">Apps</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link">Legal <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="tos.html">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Commands Section -->
+    <section style="padding: 120px 0 80px;">
+        <div class="container">
+            <h1 style="text-align: center; font-size: 3rem; margin-bottom: 1rem; color: #ffd700; text-shadow: 0 0 20px #ffd700;">Trident Bot Commands</h1>
+            <p style="text-align: center; font-size: 1.3rem; margin-bottom: 3rem; color: #f0f0f0; opacity: 0.9;">Simple and powerful commands for server management</p>
+            
+            <div style="max-width: 1000px; margin: 0 auto; background: rgba(255, 215, 0, 0.1); padding: 3rem; border-radius: 25px; border: 2px solid rgba(255, 215, 0, 0.3);">
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Antinuke Commands</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">enable</code> - Enable anti-nuke protection</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">disable</code> - Disable anti-nuke protection</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">antinukelog set/reset/show</code> - Configure anti-nuke logging</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">whitelist</code> - Add user to whitelist</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">whitelisted</code> - Show whitelisted users</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">uwhitelist</code> - Remove user from whitelist</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">extraowner set/reset/list/remove</code> - Manage extra owners</li>
+                    </ul>
+                </div>
+
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Moderation Commands</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">kick</code> - Kick a user from the server</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">ban</code> - Ban a user from the server</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">unban</code> - Unban a user from the server</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">warn</code> - Issue a warning to a user</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">hide</code> - Hide a channel</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">unhide</code> - Unhide a channel</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">hideall</code> - Hide all channels</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">unhideall</code> - Unhide all channels</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">lock</code> - Lock a channel</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">unlock</code> - Unlock a channel</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">lockall</code> - Lock all channels</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">unlockall</code> - Unlock all channels</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">mute</code> - Mute a user</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">unmute</code> - Unmute a user</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">unmuteall</code> - Unmute all users</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">nick</code> - Change user nickname</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">nuke</code> - Nuke a channel</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">purge</code> - Delete multiple messages</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">role</code> - Manage user roles</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">roleall</code> - Add role to all users</li>
+                    </ul>
+                </div>
+
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Automod Commands</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">enable</code> - Enable automod</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">disable</code> - Disable automod</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">punishment</code> - Set automod punishment</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">log set/reset/show</code> - Configure automod logging</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">whitelist user/channel/role/category</code> - Whitelist from automod</li>
+                    </ul>
+                </div>
+
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Ticket System</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">enable</code> - Enable ticket system</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">disable</code> - Disable ticket system</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">help</code> - Show ticket help</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">panelcreate</code> - Create ticket panel</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">panelconfig</code> - Configure ticket panel</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">panellist</code> - List ticket panels</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">paneldelete</code> - Delete ticket panel</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">ticketlist</code> - List all tickets</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">close</code> - Close a ticket</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">delete</code> - Delete a ticket</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">add [user]</code> - Add user to ticket</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">rename</code> - Rename a ticket</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">reopen</code> - Reopen a ticket</li>
+                    </ul>
+                </div>
+
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Utility Commands</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">avatar</code> - Show user avatar</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">afk</code> - Set AFK status</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">banner</code> - Show user banner</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">list (roles/bots/admins/bans)</code> - List server information</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">membercount</code> - Show member count</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">serverinfo</code> - Show server information</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">roleinfo</code> - Show role information</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">steal</code> - Steal an emoji</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">stealall</code> - Steal all emojis</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">timer</code> - Set a timer</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">userinfo</code> - Show user information</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">snipe</code> - Show deleted messages</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">prefix</code> - Change bot prefix</li>
+                    </ul>
+                </div>
+
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Bot Info Commands</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">ping</code> - Show bot latency</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">uptime</code> - Show bot uptime</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">support</code> - Get support server link</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">badge</code> - Show user badges</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">premium</code> - Premium information</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">report</code> - Report a bug</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">stats</code> - Show bot statistics</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">invite</code> - Get bot invite link</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">commandinfo</code> - Get command information</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">updates</code> - Show recent updates</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">changelog</code> - Show changelog</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">broadcast</code> - Send broadcast message</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">commands</code> - Show all commands</li>
+                    </ul>
+                </div>
+
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Message Count Commands</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">messagescount enable</code> - Enable the message count system</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">messagescount disable</code> - Disable the message count system</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">messagescount blacklist add</code> - Add to message count blacklist</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">messagescount blacklist remove</code> - Remove from message count blacklist</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">messagescount blacklist reset</code> - Reset the message count blacklist</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">messagescount blacklist list</code> - View message count blacklist</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">messagescount help</code> - Help for message count commands</li>
+                    </ul>
+                </div>
+
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Messages Info Commands</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">messages &lt;@user/id&gt;</code> - View message count for a user</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">messages add &lt;@user/id&gt;</code> - Add messages to a user</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">messages remove &lt;@user/id&gt;</code> - Remove messages from a user</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">messages reset &lt;@user/all&gt;</code> - Reset message count</li>
+                    </ul>
+                </div>
+
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Voice Count Commands</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">voicecount enable</code> - Enable the voice count system</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">voicecount disable</code> - Disable the voice count system</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">voicecount blacklist add</code> - Add to voice count blacklist</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">voicecount blacklist remove</code> - Remove from voice count blacklist</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">voicecount blacklist reset</code> - Reset the voice count blacklist</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">voicecount blacklist list</code> - View voice count blacklist</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">voicecount help</code> - Help for voice count commands</li>
+                    </ul>
+                </div>
+
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Voice Info Commands</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">voice &lt;@user/id&gt;</code> - View voice activity count for a user</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">voice add &lt;@user/id&gt;</code> - Add voice time to a user</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">voice remove &lt;@user/id&gt;</code> - Remove voice time from a user</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">voice reset &lt;@user/all&gt;</code> - Reset voice count</li>
+                    </ul>
+                </div>
+
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Leaderboard Commands</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">lbday messages/voice</code> - Show daily top users by messages or voice</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">lbweek messages/voice</code> - Show weekly top users by messages or voice</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">lbmonth messages/voice</code> - Show monthly top users by messages or voice</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">lb messages/voice</code> - Show all-time top users by messages or voice</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">livelb #channel/channelId</code> - Set up live leaderboard in a channel</li>
+                    </ul>
+                </div>
+
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Leave Message System</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">leave enable</code> - Enable the leave message system</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">leave disable</code> - Disable the leave message system</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">leave message</code> - Edit the leave message content</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">leave help</code> - Display help for the leave message system</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">leave autodel [number]</code> - Set auto-delete time for leave messages</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">leave channel add/remove/list</code> - Manage leave message channels</li>
+                    </ul>
+                </div>
+
+                <div class="commands-category" style="margin-bottom: 2rem;">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Boost Message System</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">boostmessage enable</code> - Enable the boost message system</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">boostmessage disable</code> - Disable the boost message system</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">boostmessage message</code> - Edit the boost message content</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">boostmessage help</code> - Display help for the boost message system</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">boostmessage autodel [number]</code> - Set auto-delete time for boost messages</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">boostmessage channel add/remove/list</code> - Manage boost message channels</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">boostmessage dm on/off</code> - Enable or disable DM notifications for boosts</li>
+                    </ul>
+                </div>
+
+                <div class="commands-category">
+                    <h2 style="color: #ffd700; font-size: 1.8rem; margin-bottom: 1rem;">Slot Commands</h2>
+                    <ul style="padding-left: 2rem;">
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">slotinfo</code> - Show slot information</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">slotping add</code> - Add slot ping</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">slotping remove</code> - Remove slot ping</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">slot category</code> - Set slot category</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">slot role add</code> - Add slot role</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">slot role remove</code> - Remove slot role</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">slot revoke</code> - Revoke slot access</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">slot add</code> - Add slot</li>
+                        <li style="margin-bottom: 0.8rem;"><code style="background: rgba(255, 215, 0, 0.2); padding: 0.2rem 0.5rem; border-radius: 5px;">slotuser</code> - Manage slot user</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <a href="https://discord.gg/lovers-arenaa" class="contact-link" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: linear-gradient(45deg, #ffd700, #ffed4e); color: #000; text-decoration: none; border-radius: 10px; font-weight: bold; transition: all 0.3s ease;">
+                        <i class="fab fa-discord"></i>
+                        <span>Join Support Server</span>
+                    </a>
+                    <a href="mailto:horizondevelopersdc@gmail.com" class="contact-link" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: linear-gradient(45deg, #ffd700, #ffed4e); color: #000; text-decoration: none; border-radius: 10px; font-weight: bold; transition: all 0.3s ease;">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email Support</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://cdn.discordapp.com/attachments/1247058898846748705/1397531761797365812/trident.gif?ex=68821060&is=6880bee0&hm=c54b2e92eacd7a044c1c571d5c7d344fdf4b4fb319dbe39377537253a9e068dc&" alt="Trident" class="footer-logo-img">
+                    <span>TRIDENT</span>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <a href="https://discord.gg/lovers-arenaa">Support Server</a>
+                        <a href="mailto:horizondevelopersdc@gmail.com">Email Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Legal</h4>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="tos.html">Terms of Service</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Developers</h4>
+                        <p>Horizon Developers</p>
+                        <p>Contact: horizondevelopersdc@gmail.com</p>
+                    </div>
+                </div>
+                <p>&copy; 2025 Trident Bot. Developed by Anvi & Horizon Developers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
