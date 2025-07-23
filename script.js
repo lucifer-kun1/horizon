@@ -1,10 +1,59 @@
 // Mobile Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
+const navDropdown = document.querySelector('.nav-dropdown');
 
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     navToggle.classList.toggle('active');
+    
+    // Animate hamburger menu
+    const bars = navToggle.querySelectorAll('.bar');
+    if (navToggle.classList.contains('active')) {
+        bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
+        bars[1].style.opacity = '0';
+        bars[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
+    } else {
+        bars[0].style.transform = 'none';
+        bars[1].style.opacity = '1';
+        bars[2].style.transform = 'none';
+    }
+});
+
+// Mobile dropdown toggle for Legal menu
+if (navDropdown) {
+    const dropdownLink = navDropdown.querySelector('.nav-link');
+    
+    dropdownLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Only toggle dropdown on mobile
+        if (window.innerWidth <= 768) {
+            navDropdown.classList.toggle('active');
+        }
+    });
+    
+    // Close dropdown when clicking outside on mobile
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && !navDropdown.contains(e.target)) {
+            navDropdown.classList.remove('active');
+        }
+    });
+}
+
+// Close mobile menu when clicking on nav links
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768 && !link.closest('.nav-dropdown')) {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+            
+            const bars = navToggle.querySelectorAll('.bar');
+            bars[0].style.transform = 'none';
+            bars[1].style.opacity = '1';
+            bars[2].style.transform = 'none';
+        }
+    });
 });
 
 // Smooth Scrolling for Navigation Links
