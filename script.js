@@ -1,46 +1,44 @@
-
+// Mobile Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
-const navDropdown = document.querySelector('.nav-dropdown');
 
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    navToggle.classList.toggle('active');
-    
-    
-    const bars = navToggle.querySelectorAll('.bar');
-    if (navToggle.classList.contains('active')) {
-        bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
-        bars[1].style.opacity = '0';
-        bars[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
-    } else {
-        bars[0].style.transform = 'none';
-        bars[1].style.opacity = '1';
-        bars[2].style.transform = 'none';
-    }
-});
-
-if (navDropdown) {
-    const dropdownLink = navDropdown.querySelector('.nav-link');
-    
-    dropdownLink.addEventListener('click', (e) => {
-        e.preventDefault();
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
         
-        if (window.innerWidth <= 768) {
-            navDropdown.classList.toggle('active');
+        // Animate hamburger menu
+        const bars = navToggle.querySelectorAll('.bar');
+        if (navToggle.classList.contains('active')) {
+            bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
+            bars[1].style.opacity = '0';
+            bars[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
+        } else {
+            bars[0].style.transform = 'none';
+            bars[1].style.opacity = '1';
+            bars[2].style.transform = 'none';
         }
     });
     
-    document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768 && !navDropdown.contains(e.target)) {
-            navDropdown.classList.remove('active');
-        }
+    // Close mobile menu when clicking on nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Close mobile menu when clicking on actual navigation links (not dropdown triggers)
+            if (window.innerWidth <= 768 && !e.target.closest('.nav-dropdown')) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+                
+                const bars = navToggle.querySelectorAll('.bar');
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            }
+        });
     });
-}
-
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        if (window.innerWidth <= 768 && !link.closest('.nav-dropdown')) {
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
             navMenu.classList.remove('active');
             navToggle.classList.remove('active');
             
@@ -50,8 +48,9 @@ document.querySelectorAll('.nav-link').forEach(link => {
             bars[2].style.transform = 'none';
         }
     });
-});
+}
 
+// Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -65,6 +64,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Navbar Background Change on Scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -74,6 +74,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Animate Elements on Scroll
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -88,6 +89,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+// Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
     const animateElements = document.querySelectorAll('.feature-card, .command-category, .developer-card, .doc-link');
     
@@ -99,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Add hover effects to buttons
 document.querySelectorAll('.btn, .share-btn, .contact-link').forEach(button => {
     button.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-2px)';
@@ -109,10 +112,11 @@ document.querySelectorAll('.btn, .share-btn, .contact-link').forEach(button => {
     });
 });
 
+// Copy command functionality (if needed)
 document.querySelectorAll('.command').forEach(command => {
     command.addEventListener('click', function() {
         navigator.clipboard.writeText(this.textContent).then(() => {
-           
+            // Show a temporary tooltip or notification
             const tooltip = document.createElement('div');
             tooltip.textContent = 'Copied!';
             tooltip.style.cssText = `
@@ -129,6 +133,7 @@ document.querySelectorAll('.command').forEach(command => {
                 animation: fadeOut 2s forwards;
             `;
             
+            // Add fade out animation
             const style = document.createElement('style');
             style.textContent = `
                 @keyframes fadeOut {
@@ -147,6 +152,7 @@ document.querySelectorAll('.command').forEach(command => {
     });
 });
 
+// Stats Counter Animation
 function animateCounter(element, target) {
     let current = 0;
     const increment = target / 100;
@@ -160,6 +166,7 @@ function animateCounter(element, target) {
     }, 20);
 }
 
+// Animate stats when they come into view
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
