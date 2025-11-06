@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Plans – Trident Bot</title>
+    <meta name="description" content="Unlock advanced features with Trident Bot Premium - Extra slots, whitelist users, custom bot configurations, and more.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .premium-hero {
+            padding: 120px 0 60px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 0, 0, 0.3));
+        }
+
+        .premium-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffd700, #ffb400, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .premium-hero p {
+            font-size: 1.3rem;
+            color: #f0f0f0;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .pricing-section {
+            padding: 80px 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .pricing-card {
+            background: rgba(255, 215, 0, 0.05);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 25px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: #ffd700;
+            box-shadow: 0 20px 50px rgba(255, 215, 0, 0.3);
+        }
+
+        .pricing-card.featured {
+            border-color: #ffd700;
+            background: rgba(255, 215, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: linear-gradient(45deg, #ffd700, #ffb400);
+            color: #1a1a1a;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .pricing-icon {
+            font-size: 3.5rem;
+            color: #ffd700;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px #ffd700;
+        }
+
+        .pricing-title {
+            font-size: 2rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .pricing-price span {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        .pricing-period {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 0.8rem 0;
+            color: #f0f0f0;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li i {
+            color: #ffd700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .pricing-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #ffd700, #ffb400);
+            color: #1a1a1a;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid #ffd700;
+            font-size: 1.1rem;
+        }
+
+        .pricing-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+        }
+
+        .pricing-btn-secondary {
+            background: transparent;
+            color: #ffd700;
+        }
+
+        .pricing-btn-secondary:hover {
+            background: #ffd700;
+            color: #1a1a1a;
+        }
+
+        .extra-section {
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .extra-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 3rem;
+            text-shadow: 0 0 20px #ffd700;
+        }
+
+        .extra-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .extra-card {
+            background: rgba(255, 215, 0, 0.08);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .extra-card:hover {
+            transform: translateY(-5px);
+            border-color: #ffd700;
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.3);
+        }
+
+        .extra-card h3 {
+            font-size: 1.5rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .extra-card .price {
+            font-size: 2rem;
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .extra-card p {
+            color: #f0f0f0;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .note-section {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .note-section p {
+            color: #ccc;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .premium-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .premium-hero p {
+                font-size: 1.1rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .extra-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-price {
+                font-size: 2.5rem;
+            }
+
+            .pricing-title {
+                font-size: 1.7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .premium-hero h1 {
+                font-size: 2rem;
+            }
+
+            .pricing-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .pricing-price {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://cdn.discordapp.com/attachments/1247058898846748705/1397531761797365812/trident.gif?ex=68821060&is=6880bee0&hm=c54b2e92eacd7a044c1c571d5c7d344fdf4b4fb319dbe39377537253a9e068dc&" alt="Trident" class="logo-img">
+                <h2>TRIDENT</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="commands.html" class="nav-link">Commands</a>
+                <a href="apps.html" class="nav-link">Apps</a>
+                <a href="premium.html" class="nav-link">Premium</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link">Legal <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="tos.html">Terms of Service</a>
+                    </div>
+                </div>
+                <!-- Mobile-only links -->
+                <a href="privacy.html" class="nav-link mobile-only">Privacy Policy</a>
+                <a href="tos.html" class="nav-link mobile-only">Terms of Service</a>
+            </div>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Premium Hero -->
+    <section class="premium-hero">
+        <div class="container">
+            <h1><i class="fas fa-crown"></i> Premium Plans</h1>
+            <p>Unlock the full potential of Trident Bot with advanced features, enhanced security, and exclusive customization options.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="pricing-grid">
+            <!-- Basic Plan -->
+            <div class="pricing-card">
+                <div class="pricing-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h2 class="pricing-title">Basic</h2>
+                <div class="pricing-price">₹99<span>/month</span></div>
+                <p class="pricing-period">Perfect for growing servers</p>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Extra 25 Setup Slots</li>
+                    <li><i class="fas fa-check"></i> 30 Extra Setup Roles</li>
+                    <li><i class="fas fa-check"></i> 30 Extra Giveaway Limit</li>
+                    <li><i class="fas fa-check"></i> 30+ VcLevel/Level Rewards</li>
+                    <li><i class="fas fa-check"></i> VcLevel/Level Image Unlock</li>
+                    <li><i class="fas fa-check"></i> Extra Message & Voice Time Slots</li>
+                    <li><i class="fas fa-check"></i> Extra Whitelist User Slots</li>
+                    <li><i class="fas fa-clock"></i> Autoresponse Embed (Next Update)</li>
+                    <li><i class="fas fa-clock"></i> Sticky Message Embed (Next Update)</li>
+                </ul>
+                <a href="https://discord.gg/lovers-arenaa" class="pricing-btn pricing-btn-secondary">Get Basic</a>
+            </div>
+
+            <!-- Advance Plan -->
+            <div class="pricing-card featured">
+                <div class="pricing-badge">Popular</div>
+                <div class="pricing-icon">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h2 class="pricing-title">Advance</h2>
+                <div class="pricing-price">₹149<span>/month</span></div>
+                <p class="pricing-period">For serious server owners</p>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> All Basic Features (×2)</li>
+                    <li><i class="fas fa-check"></i> 50 Extra Setup Slots</li>
+                    <li><i class="fas fa-check"></i> 60 Extra Setup Roles</li>
+                    <li><i class="fas fa-check"></i> 60 Extra Giveaway Limit</li>
+                    <li><i class="fas fa-check"></i> 60+ VcLevel/Level Rewards</li>
+                    <li><i class="fas fa-check"></i> Guild No Prefix Access</li>
+                    <li><i class="fas fa-check"></i> Advanced Antinuke System</li>
+                    <li><i class="fas fa-check"></i> Antinuke Premium (Fast Speed)</li>
+                    <li><i class="fas fa-check"></i> Autologs System</li>
+                    <li><i class="fas fa-clock"></i> Custom Bot Bio, Name, Banner, PFP (Next Update)</li>
+                    <li><i class="fas fa-clock"></i> Custom Advance Giveaway System (Next Update)</li>
+                </ul>
+                <a href="https://discord.gg/lovers-arenaa" class="pricing-btn">Get Advance</a>
+            </div>
+
+            <!-- Extra Features Card -->
+            <div class="pricing-card">
+                <div class="pricing-icon">
+                    <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <h2 class="pricing-title">Extra</h2>
+                <p style="color: #f0f0f0; margin: 1.5rem 0; opacity: 0.9;">Add individual features to any plan</p>
+                <ul class="pricing-features">
+                    <li>
+                        <i class="fas fa-terminal"></i>
+                        <div>
+                            <strong>No Prefix (Personal)</strong>
+                            <div style="font-size: 0.9rem; color: #ccc;">₹49/month</div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-server"></i>
+                        <div>
+                            <strong>Guild No Prefix</strong>
+                            <div style="font-size: 0.9rem; color: #ccc;">₹89/month</div>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-paint-brush"></i>
+                        <div>
+                            <strong>Edit Bot</strong>
+                            <div style="font-size: 0.9rem; color: #ccc;">₹102 (Next Update)</div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="https://discord.gg/lovers-arenaa" class="pricing-btn pricing-btn-secondary">Get Add-ons</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Note Section -->
+    <section class="note-section">
+        <p><i class="fas fa-info-circle"></i> All premium features are subject to availability. Features marked with "Next Update" will be available soon. Contact support for custom pricing and bulk discounts.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://cdn.discordapp.com/attachments/1247058898846748705/1397531761797365812/trident.gif?ex=68821060&is=6880bee0&hm=c54b2e92eacd7a044c1c571d5c7d344fdf4b4fb319dbe39377537253a9e068dc&" alt="Trident" class="footer-logo-img">
+                    <span>TRIDENT</span>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <a href="https://discord.gg/lovers-arenaa">Support Server</a>
+                        <a href="mailto:horizondevelopersdc@gmail.com">Email Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Legal</h4>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="tos.html">Terms of Service</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <a href="commands.html">Commands</a>
+                        <a href="apps.html">Our Apps</a>
+                        <a href="premium.html">Premium</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Developers</h4>
+                        <p>Horizon Developers</p>
+                        <p>Contact: horizondevelopersdc@gmail.com</p>
+                    </div>
+                </div>
+                <p>&copy; 2025 Trident Bot. Developed by Anvi & Horizon Developers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
